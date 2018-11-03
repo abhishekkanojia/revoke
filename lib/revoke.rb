@@ -24,4 +24,4 @@ module Revoke
   end
 end
 
-ActiveRecord::Base.send :include, Revoke
+ActiveRecord::Base.send :include, Revoke if defined?(Rails)
