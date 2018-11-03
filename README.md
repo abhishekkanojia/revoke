@@ -1,3 +1,4 @@
+![alt text](https://raw.githubusercontent.com/abhishekkanojia/images/master/revoke_gem.png "Revoke Gem")
 # Revoke
 Adding revoke to your application provides you with an ability to prevent create, update and delete of an entity based on some event.
 
