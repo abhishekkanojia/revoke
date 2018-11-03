@@ -4,6 +4,10 @@ Adding revoke to your application provides you with an ability to prevent create
 #### Usecase
 Your blog application has comments on articles which you want to be updated only within 10 minutes of creation. Here, `Revoke` gem comes handy to handle this scenario with ease.
 
+# Requirements
+Revoke currently supports **Rails 5.2.0** and **Ruby >= 2.4.1**.
+
+
 # Installation
 Add following line to `Gemfile` and `bundle`
 
