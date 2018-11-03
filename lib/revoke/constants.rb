@@ -6,8 +6,7 @@ module Revoke
     }.freeze
     ACTION_MAP = {
       creation: 'created_at',
-      updation: 'updated_at',
-      deletion: 'deleted_at'
+      updation: 'updated_at'
     }.freeze
   end
 end
