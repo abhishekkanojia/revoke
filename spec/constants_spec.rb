@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Revoke::Constants do
+RSpec.describe Revoke::Constants do
   describe 'ACTION' do
     it { expect(described_class::ACTION).to eq([:update, :delete]) }
     it { expect(described_class::ACTION).to be_frozen }
