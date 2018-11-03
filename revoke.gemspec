@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Add time based restriction to your rails application with Revoke gem.}
   spec.description   = %q{Revoke provides easy an easier way to prevent your rail's application model from being updated based on an event.}
-  spec.homepage      = "https://github.com/abhishekkanojia/proto.git"
+  spec.homepage      = "https://github.com/abhishekkanojia/revoke.git"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
