@@ -72,7 +72,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/revoke.
+Bug reports and pull requests are welcome on GitHub at https://github.com/abhishekkanojia/revoke.
 
 ## License
 
