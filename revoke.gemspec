@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Abhishek kanojia"]
   spec.email         = ["abhishek.kanojia3193@gmail.com"]
 
-  spec.summary       = %q{Revoke lets you prevent model alteration on specific event.}
-  spec.description   = %q{Revoke add the functionality to be prevented from updated after a specified period of time.}
+  spec.summary       = %q{Add time based restriction to your rails application with Revoke gem.}
+  spec.description   = %q{Revoke provides easy an easier way to prevent your rail's application model from being updated based on an event.}
   spec.homepage      = "https://github.com/abhishekkanojia/proto.git"
   spec.license       = "MIT"
 
