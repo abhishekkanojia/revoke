@@ -1,0 +1,8 @@
+en:
+  revoke:
+    destroy:
+      after:
+        error: '%{class_name} can only be destroyed for %{time} %{event} %{deciding_event}.'
+    update:
+      after:
+        error: '%{class_name} can only be updated for %{time} %{event} %{deciding_event}.'
