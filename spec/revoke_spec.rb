@@ -33,17 +33,6 @@ RSpec.describe Revoke do
       end
     end
 
-    describe 'create callback' do
-      before do
-        FakeModel.revoke :create, :after, 10.minutes, :creation
-        @subject = FakeModel.new
-      end
-
-      it 'expect callback having name revoke_create_handler' do
-        expect(@subject.respond_to?(:revoke_create_handler, true)).to eq(true)
-      end
-    end
-
     describe 'destroy callback' do
       before do
         FakeModel.revoke :destroy, :after, 10.minutes, :creation

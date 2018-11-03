@@ -17,7 +17,7 @@ module Revoke
       if args.size.eql?(2)
         Revoke::ConditionalCallbackCreator.new(self, args[0], args[1])
       else
-        Revoke::CallbackCreator.new(self, args[0], args[1], args[2], args[3])
+        Revoke::CallbackCreator.new(self, args[0], args[1], args[2], args[3], args[4])
       end
     end
 

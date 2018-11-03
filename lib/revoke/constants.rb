@@ -1,6 +1,6 @@
 module Revoke
   module Constants
-    ACTION = %i[update delete].freeze
+    ACTION = %i[update destroy].freeze
     EVENT = {
       after: '>'
     }.freeze
