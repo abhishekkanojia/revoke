@@ -1,4 +1,5 @@
 ![alt text](https://raw.githubusercontent.com/abhishekkanojia/images/master/revoke_gem.png "Revoke Gem")
+
 # Revoke
 Adding revoke to your application provides you with an ability to prevent create, update and delete of an entity based on some event.
 
@@ -7,7 +8,6 @@ Your blog application has comments on articles which you want to be updated only
 
 # Requirements
 Revoke currently supports **Rails 5.2.0** and **Ruby >= 2.4.1**.
-
 
 # Installation
 Add following line to `Gemfile` and `bundle`
@@ -24,34 +24,49 @@ gem install revoke
 Revoke gem provides two forms of `revoke` class method which can be called in model to prevent create, update or delete based on condition.
 You can revoke 3 actions:
 ## Event Revoke
-##### Update
+##### Update & Destroy
 ---
 ```ruby
-# Revoke update of object after 10 minutes of its creation.
- revoke :update, :after, 10.minutes, :creation
+class User < ApplicationRecord
+    # Revoke update of object after 10 minutes of its creation.
+     revoke :update, :after, 10.minutes, :creation
 
- # Revoke destroy of object after 10.minutes of its updation.
- revoke :destroy, :after, 10.minutes, :updation
+     # Revoke destroy of object after 10.minutes of its updation.
+     revoke :destroy, :after, 10.minutes, :updation
+end
 ```
-#### Destroy
----
-```ruby
-# Revoke destroy of object after 10 minutes of its creation.
- revoke :destroy, :after, 10.minutes, :creation
-```
+
 `Default error message: '{class_name} can only be {destroyed|updated} for {time_duration} after #{creation|updation}.`
 
 ## Conditional Revoke
 ```ruby
-revoke :update, if: :some_method?
+class User < ApplicationRecord
+    revoke :update, if: :some_method?
+
+    def some_method?
+    ...
+    end
+end
 ```
 
 ```ruby
-revoke :create, if: :some_method?
+class User < ApplicationRecord
+    revoke :create, if: :some_method?
+
+    def some_method?
+    ...
+    end
+end
 ```
 
 ```ruby
-revoke :destroy, if: :some_method?
+class User < ApplicationRecord
+    revoke :destroy, if: :some_method?
+
+    def some_method?
+    ...
+    end
+end
 ```
 `Default error message: "Operation not allowed."`
 ## Customizing Error Messages
@@ -63,6 +78,7 @@ These error message can be overridden with `message` option passed alongwith `re
  revoke :update, if: :some_condition?, message: 'Update not allowed.'
  revoke :destroy, if: :some_condition?, message: 'Destroy not allowed.'
 ```
+
 
 ## Development
 
